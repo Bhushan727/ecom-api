@@ -26,6 +26,10 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
+app.get('/',(req,res)=>{
+    res.send('Welcome to Ecom Api')
+})
+
 app.post('/register',async (req,res)=>{
     const { name,email,password } = req.body
     console.log( name,email,password);
